@@ -1,0 +1,24 @@
+# ===== Root & all subfolders =====
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build / production
+build/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*.local
+
+# Misc
+.DS_Store
+.pnp
+.pnp.js
+coverage/
