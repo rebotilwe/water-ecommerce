@@ -1,47 +1,40 @@
-import React from 'react'
-import './Footer.css'
-import { assets } from '../../assets/assets'
+import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
-    return (
-        <div className='footer'>
-            <div className="footer-content">
-                <div className="footer-content-left">
-                    <img src={assets.logo} alt=""/>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry  </p>
-                    <div classname="footer-social-icons">
-                        <img src = {assets.facebook_icon} alt=""/>
-                        <img src = {assets.twitter_icon} alt=""/>
-                        <img src = {assets.linkedin_icon} alt=""/>
-                    </div>
-                     
-                   
-
-                </div>
-                <div className="footer-content-center">
-                    <h2>COMPANY</h2>
-                    <ul>
-                        <li>Home</li>
-                        <li>About us</li>
-                        <li>Delivery</li>
-                        <li>Privacy policy</li>
-                    </ul>
-
-                </div>
-                <div className="footer-content-right">
-                    <h2>GET IN TOUCH</h2>
-                    <ul>
-                        <li>+27-063-577-3160</li>
-                        <li>rebotilwemokiba@gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-            <hr />
-            <p className="footer-copyright">Copyright 2024 @ Rebotilwemokiba@gmail.com - All Right Reserved.</p>
-
-
+const Footer = () => (
+  <footer className="footer">
+    <div className="footer-sections">
+      <div className="footer-brand">
+        {/* <img src="https://via.placeholder.com/120x40?text=LOGO" alt="Logo" className="footer-logo" /> */}
+        <p className="footer-description">
+          For questions or feedback, reach out any time. Serving you since 2024.
+        </p>
+      </div>
+      <div className="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div className="footer-contact">
+        <h4>Contact</h4>
+        <p>+27-063-577-3160</p>
+        <p>rebotilwemokiba@gmail.com</p>
+        <div className="footer-icons">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">FB</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">TW</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LN</a>
         </div>
-    )
-}
+      </div>
+    </div>
+    <div className="footer-bottom">
+      <hr />
+      <p>© 2024 Rebotilwe Mokiba — All Rights Reserved.</p>
+    </div>
+  </footer>
+);
 
-export default Footer
+export default Footer;

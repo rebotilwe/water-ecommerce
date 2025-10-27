@@ -4,10 +4,11 @@ import { Route, Routes } from 'react-router-dom';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import Cart from './pages/Cart/Cart';
 import Home from './pages/Home/Home';
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer.js';
 import LoginPopUp from './components/LoginPopUp/LoginPopUp';
 import Success from './components/Success';
-// import Cancel from './components/Cancel';
+
+import Contact from './components/Contact/Contact';
 // import Contact from './components/Contact/Contact';
 
 const App = () => {
@@ -37,36 +38,39 @@ const App = () => {
     setUser(null);
   };
 
-  return (
-    <>
-      {showLogin && (
-        <LoginPopUp
-          setShowLogin={setShowLogin}
-          setIsLoggedIn={setIsLoggedIn}
-          setUser={setUser}
-        />
-      )}
+return (
+  <>
+    {showLogin && (
+      <LoginPopUp
+        setShowLogin={setShowLogin}
+        setIsLoggedIn={setIsLoggedIn}
+        setUser={setUser}
+      />
+    )}
 
-      <div className="app">
-        <Navbar
-          setShowLogin={setShowLogin}
-          isLoggedIn={isLoggedIn}
-          handleLogout={handleLogout}
-          user={user}
-        />
+    <div className="app">
+      <Navbar
+        setShowLogin={setShowLogin}
+        isLoggedIn={isLoggedIn}
+        handleLogout={handleLogout}
+        user={user}
+      />
 
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/success" element={<Success />} />
-       
+          <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
+      </main>
 
       <Footer />
-    </>
-  );
+    </div>
+  </>
+);
+
 };
 
 export default App;
