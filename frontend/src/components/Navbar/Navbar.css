@@ -1,67 +1,67 @@
- .navbar{
+.navbar{
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
- }
- .navbar .logo{
+}
+.navbar .logo{
     width: 150px;
- }
- .navbar-menu{
+}
+.navbar-menu{
     display: flex;
     list-style: none;
     gap: 20px;
-    color: #49557e;
+    color: #004080; /* Dark Blue for water theme */
     font-size: 18px;
- }
- .navbar-right{
+}
+.navbar-right{
     display: flex;
     align-items: center;
     gap: 40px;
- }
- .navbar button{
+}
+.navbar button{
     background: transparent;
     font-size: 16px;
-    color: #49557e;
-    border: 1px solid tomato;
+    color: #00bfff; /* DeepSkyBlue for buttons */
+    border: 1px solid #00bfff;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
     transition: 0.3s;
+}
 
- }
-
- .navbar button:hover{
-     background-color: #fff4f2;
- }
- .navbar .active{
+.navbar button:hover{
+    background-color: #e6f7ff; /* light water blue hover */
+}
+.navbar .active{
     padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
- }
+    border-bottom: 2px solid #00bfff;
+}
 
- .navbar li{
+.navbar li{
     cursor: pointer;
- }
- .navbar-search-icon{
+}
+.navbar-search-icon{
     position: relative;
- }
- .navbar-search-icon .dot{
+}
+.navbar-search-icon .dot{
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: tomato;
+    background-color: #00bfff; /* water-themed dot */
     border-radius: 5px;
     top: -8px;
     right: -8px;
- }
- @media (max-width:1050px){
+}
+
+/* Responsive adjustments */
+@media (max-width:1050px){
    .navbar .logo{
-      width:17px;
+      width: 140px;
    }
    .navbar-menu{
       gap:20px;
       font-size: 17px;
-
    }
    .navbar-right{
       gap:30px;
@@ -72,16 +72,14 @@
    .navbar-right button{
       padding: 8px 25px;
    }
- }
-
- @media (max-width:900px){
+}
+@media (max-width:900px){
    .navbar .logo{
       width: 120px;
    }
    .navbar-menu{
       gap:15px;
       font-size: 16px;
-
    }
    .navbar-right{
       gap:20px;
@@ -93,14 +91,9 @@
       padding: 8px 25px;
       font-size: 15px ;
    }
- }
- @media (max-width:750px){
-   
+}
+@media (max-width:750px){
    .navbar-menu{
      display: none;
-
    }
- 
- }
- 
- 
+}

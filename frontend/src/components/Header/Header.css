@@ -1,18 +1,16 @@
-
-
 .header{
     height: 34vw;
     margin: 30px auto;
-    background-image: url('../../assets/header_img.png');
-
-    background-size: contain;
+    background-image: url('../../assets/water_header.png'); /* change header image to water */
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 .header-contents{
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.5vw;
     max-width: 50%;
     bottom: 10%;
@@ -20,25 +18,31 @@
     animation: fadeIn 3s;
 }
 .header-contents h2{
-    font-weight: 500;
-    color: white;
+    font-weight: 600;
+    color: #00bfff; /* Water blue heading */
     font-size: max(4.5vw,22px);
 }
 .header-contents p{
-    color: white;
+    color: #004080; /* Dark blue text for description */
     font-size: 1vw;
 }
 .header-contents button{
     border: none;
-    color: #747474;
+    color: white;
     font-weight: 500;
     padding: 1vw 2.3vw;
-    background-color: white;
+    background-color: #00bfff; /* Water blue button */
     font-size: max(1vw,13px);
     border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
 }
+.header-contents button:hover{
+    background-color: #0077cc; /* Darker blue hover */
+}
+
+/* Responsive adjustments */
 @media (max-width:1050px){
-  
     .header-contents{
         max-width: 45%;
     }

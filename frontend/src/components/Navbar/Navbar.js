@@ -2,18 +2,16 @@ import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
-import logoutButton from "../LogOutButton/LogOutButton";
 import { StoreContext } from "../../Context/StoreContext";
-import LogoutButton from "../LogOutButton/LogOutButton";
-import axios from "axios";
-const Navbar = ({ setShowLogin, isLoggedIn, handleLogout,setIsLoggedIn }) => {
+
+const Navbar = ({ setShowLogin, isLoggedIn }) => {
   const { getTotalCartAmount } = useContext(StoreContext);
   const [menu, setMenu] = useState("menu");
 
   return (
     <div className="navbar">
       <Link to="/">
-        <img src={assets.logo} alt="" className="logo" />
+        <img src={assets.logo} alt="WaterLogo" className="logo" />
       </Link>
 
       <ul className="navbar-menu">
@@ -25,11 +23,11 @@ const Navbar = ({ setShowLogin, isLoggedIn, handleLogout,setIsLoggedIn }) => {
           home
         </Link>
         <a
-          href="#explore-menu"
-          onClick={() => setMenu("menu")}
-          className={menu === "menu" ? "active" : ""}
+          href="#shop-products"
+          onClick={() => setMenu("products")}
+          className={menu === "products" ? "active" : ""}
         >
-          menu
+          products
         </a>
         <a
           href="#app-download"
@@ -48,20 +46,17 @@ const Navbar = ({ setShowLogin, isLoggedIn, handleLogout,setIsLoggedIn }) => {
       </ul>
 
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
+        <img src={assets.search_icon} alt="Search" />
         <div className="navbar-search-icon">
           <Link to="/cart">
-            <img src={assets.basket_icon} alt="" />
+            <img src={assets.basket_icon} alt="Cart" />
           </Link>
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
 
-    {isLoggedIn ? (
-  <LogoutButton setIsLoggedIn={setIsLoggedIn} />
-) : (
-  <button onClick={() => setShowLogin(true)}>Sign In</button>
-)}
-
+        {!isLoggedIn && (
+          <button onClick={() => setShowLogin(true)}>Sign In</button>
+        )}
       </div>
     </div>
   );

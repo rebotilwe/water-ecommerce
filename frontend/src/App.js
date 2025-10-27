@@ -7,8 +7,8 @@ import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
 import LoginPopUp from './components/LoginPopUp/LoginPopUp';
 import Success from './components/Success';
-import Cancel from './components/Cancel';
-import Contact from './components/Contact/Contact';
+// import Cancel from './components/Cancel';
+// import Contact from './components/Contact/Contact';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -60,8 +60,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/success" element={<Success />} />
-          <Route path="/cancel" element={<Cancel />} />
-          <Route path="/contact" element={<Contact />} />
+       
         </Routes>
       </div>
 
