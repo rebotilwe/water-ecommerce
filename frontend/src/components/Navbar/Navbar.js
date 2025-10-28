@@ -10,9 +10,9 @@ const Navbar = ({ setShowLogin, isLoggedIn }) => {
 
   return (
     <div className="navbar">
-      <Link to="/">
+      {/* <Link to="/">
         <img src={assets.logo} alt="" className="logo" />
-      </Link>
+      </Link> */}
 
       <ul className="navbar-menu">
         <Link
@@ -22,13 +22,16 @@ const Navbar = ({ setShowLogin, isLoggedIn }) => {
         >
           Home
         </Link>
-             <a
-          href="#explore-menu"
-          onClick={() => setMenu("menu")}
-          className={menu === "menu" ? "active" : ""}
+
+        {/* ✅ Changed from <a href="#about"> to <Link to="/about"> */}
+        <Link
+          to="/about"
+          onClick={() => setMenu("about")}
+          className={menu === "about" ? "active" : ""}
         >
-           About Us
-        </a>
+          About Us
+        </Link>
+
         <a
           href="#explore-menu"
           onClick={() => setMenu("menu")}
@@ -36,6 +39,7 @@ const Navbar = ({ setShowLogin, isLoggedIn }) => {
         >
           Products
         </a>
+
         <a
           href="#app-download"
           onClick={() => setMenu("mobile-app")}
@@ -43,6 +47,7 @@ const Navbar = ({ setShowLogin, isLoggedIn }) => {
         >
           Mobile-App
         </a>
+
         <Link
           to="/contact"
           onClick={() => setMenu("contact-us")}

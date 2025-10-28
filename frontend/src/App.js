@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer.js';
 import LoginPopUp from './components/LoginPopUp/LoginPopUp';
 import Success from './components/Success';
+import About from './components/About/About.js';
 
 import Contact from './components/Contact/Contact';
 // import Contact from './components/Contact/Contact';
@@ -63,6 +64,7 @@ return (
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/success" element={<Success />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />}/>
         </Routes>
       </main>
 
